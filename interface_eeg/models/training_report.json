@@ -1,0 +1,29 @@
+{
+  "dataset": "PhysioNet EEGBCI",
+  "subject_id": 1,
+  "n_training_epochs": 120,
+  "sampling_rate": 160.0,
+  "cross_validation": {
+    "n_folds": 5,
+    "fold_accuracies": [
+      0.75,
+      0.5417,
+      0.5417,
+      0.5417,
+      0.75
+    ],
+    "mean_accuracy": 0.625,
+    "std_accuracy": 0.1021
+  },
+  "class_mapping": {
+    "0": "REST",
+    "1": "GRASP",
+    "2": "RELEASE"
+  },
+  "model_architecture": {
+    "spatial_filter": "Common Spatial Patterns (CSP, 4 components)",
+    "classifier": "Regularized Linear Discriminant Analysis (Shrinkage: Ledoit-Wolf analytic)",
+    "frequency_band": "8.0 - 30.0 Hz (Mu + Beta)",
+    "referencing": "Common Average Reference (CAR)"
+  }
+}
